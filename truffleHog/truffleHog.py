@@ -260,6 +260,7 @@ def find_strings(git_url, since_commit=None, max_depth=1000000, printJson=False,
                 break
             # Fix to set commit hash back one step
             commit_hash = prev_commit
+            
             # if not prev_commit, then curr_commit is the newest commit. And we have nothing to diff with.
             # But we will diff the first commit with NULL_TREE here to check the oldest code.
             # In this way, no commit will be missed.
